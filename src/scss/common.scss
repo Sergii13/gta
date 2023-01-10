@@ -1,0 +1,45 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.border-gradient {
+   position: relative;
+   &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: 2px solid;
+      background-image: linear-gradient(90deg, #02549f 0%, #002e58 100%),
+         linear-gradient(
+            108.74deg,
+            rgba(255, 255, 255, 0.135) 36.46%,
+            rgba(255, 255, 255, 0.075) 73.96%,
+            rgba(13, 220, 170, 0.0615) 100%
+         );
+      background-clip: padding-box, border-box;
+      background-origin: border-box;
+      border: 2px solid transparent;
+      border-radius: 5px;
+   }
+   & > * {
+      z-index: 2;
+   }
+}
+.title {
+   font-weight: 600;
+   font-size: rem(35);
+   line-height: math.div(43, 35);
+   text-transform: uppercase;
+   text-align: center;
+   position: relative;
+   display: inline-block;
+   padding-top: rem(20);
+   &__decor {
+      top: 0px;
+      left: -20px;
+      position: absolute;
+      color: rgba(255, 255, 255, 0);
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+   }
+}

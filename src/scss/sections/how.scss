@@ -1,0 +1,178 @@
+.how {
+   background: url("@img/how/bg.svg") 0 0 / cover no-repeat;
+   border-top: 2px solid #09263f;
+   position: relative;
+   padding: rem(33) 0 0;
+   overflow: hidden;
+   &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: url("@img/why/bg.png") repeat;
+   }
+   // .how__container
+   &__container {
+      position: relative;
+      z-index: 2;
+   }
+   // .how__title-wrap
+   &__title-wrap {
+      display: flex;
+      justify-content: center;
+      &:not(:last-child) {
+         margin-bottom: rem(57);
+      }
+   }
+   // .how__title
+   &__title {
+   }
+   // .how__steps
+   &__steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: rem(13);
+      &:not(:last-child) {
+         margin-bottom: rem(41);
+      }
+   }
+   // .how__step
+   &__step {
+      display: flex;
+      align-items: flex-start;
+      position: relative;
+      &:not(:last-child) {
+         &::after {
+            pointer-events: none;
+            content: "";
+            position: absolute;
+         }
+      }
+      &:nth-child(1) {
+         &::after {
+            width: percent(246, 269);
+            height: 45px;
+            left: 30px;
+            background: url("@img/how/line01.svg ") center / contain no-repeat;
+            bottom: calc(100% + 20px);
+         }
+      }
+      &:nth-child(2) {
+         &::after {
+            width: percent(304, 269);
+            height: 92px;
+            left: -10px;
+            background: url("@img/how/line02.svg ") center / contain no-repeat;
+            bottom: -25px;
+         }
+      }
+      &:nth-child(3) {
+         &::after {
+            width: percent(253, 269);
+            height: 30px;
+            left: 20px;
+            background: url("@img/how/line03.svg ") center / contain no-repeat;
+            bottom: calc(100% + 20px);
+         }
+      }
+      &:nth-child(odd) {
+         margin-top: 30px;
+      }
+   }
+   &__step-text {
+      line-height: math.div(18, 15);
+      position: relative;
+      z-index: 2;
+   }
+   // .how__step-digit
+   &__step-digit {
+      font-weight: 700;
+      font-size: rem(27);
+      line-height: math.div(33, 27);
+      position: relative;
+      margin-top: rem(-15);
+      &::after {
+         content: "";
+         width: 22px;
+         height: 31px;
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%) rotate(-2.14deg);
+         border: 2px solid #0085ff;
+      }
+   }
+   // .how__wrap
+   &__wrap {
+      max-width: rem(646);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+   }
+   // .how__buttons
+   &__buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: rem(10);
+      &:not(:last-child) {
+         margin-bottom: rem(10);
+      }
+   }
+   // .how__button
+   &__button {
+   }
+   // .how__link
+   &__link {
+      font-size: rem(13);
+      line-height: math.div(16, 13);
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (any-hover: hover) {
+         &:hover {
+            color: #0085ff;
+         }
+      }
+   }
+   // .how__image
+   &__image {
+      position: relative;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      pointer-events: none;
+      img {
+         position: relative;
+         z-index: 2;
+      }
+      margin-top: rem(-80);
+   }
+   // .how__button-decor
+   &__button-decor {
+      position: absolute;
+      z-index: 3;
+      &.one {
+         bottom: 100px;
+         right: 200px;
+      }
+      &.two {
+         bottom: 150px;
+         right: 300px;
+      }
+   }
+   // .how__decor-line
+   &__decor-line {
+      position: absolute;
+      width: 150vw;
+      height: 200px;
+      top: 50%;
+      left: -30vw;
+      transform: translate(0, -50%) rotate(-1deg);
+      background: linear-gradient(108.74deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+   }
+}
+
+.orange {
+}
+.one {
+}
+.two {
+}

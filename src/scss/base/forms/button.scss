@@ -1,0 +1,141 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+   display: inline-flex;
+   white-space: nowrap;
+   align-items: center;
+   justify-content: center;
+   padding: rem(5) rem(10);
+   height: rem(50);
+   border-radius: 5px;
+   font-weight: 600;
+   background: linear-gradient(90deg, #de5000 0%, #b34000 100%);
+   position: relative;
+   transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+   &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: 2px solid;
+      background-image: linear-gradient(90deg, #de5000 0%, #b34000 100%),
+         linear-gradient(
+            108.74deg,
+            rgba(255, 255, 255, 0.135) 36.46%,
+            rgba(255, 255, 255, 0.075) 73.96%,
+            rgba(13, 220, 170, 0.0615) 100%
+         );
+      background-clip: padding-box, border-box;
+      background-origin: border-box;
+      border: 2px solid transparent;
+      border-radius: 5px;
+   }
+   img {
+      width: 25px;
+      height: 25px;
+      flex-shrink: 0;
+   }
+   &__row {
+      display: inline-flex;
+      align-items: center;
+      gap: rem(10);
+      position: relative;
+      z-index: 2;
+   }
+   @media (any-hover: hover) {
+      &:hover {
+         filter: drop-shadow(0px 4px 40px rgba(198, 72, 0, 0.5));
+      }
+   }
+   &:active {
+      transition: all 0.1s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      filter: none;
+   }
+   &_blue {
+      background: linear-gradient(108.74deg, rgba(0, 133, 255, 0.2) 0%, rgba(0, 133, 255, 0.04) 100%);
+      &::after {
+         background-image: linear-gradient(108.74deg, rgba(0, 133, 255, 0.2) 0%, rgba(0, 133, 255, 0.04) 100%),
+            linear-gradient(
+               108.74deg,
+               rgba(255, 255, 255, 0.135) 36.46%,
+               rgba(255, 255, 255, 0.075) 73.96%,
+               rgba(13, 220, 170, 0.0615) 100%
+            );
+         background-clip: padding-box, border-box;
+         background-origin: border-box;
+         border: 3px solid transparent;
+      }
+      &:hover {
+         filter: none;
+         box-shadow: 0px 4px 20px rgba(0, 133, 255, 0.25);
+      }
+
+      &:active {
+         box-shadow: none;
+      }
+   }
+}
+.button-icon {
+   background: linear-gradient(108.74deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 100%);
+   border-radius: 5px;
+   padding: rem(5);
+   display: inline-block;
+   &__row {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+      position: relative;
+      padding-right: rem(5);
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 40px;
+         height: 100%;
+         background: linear-gradient(90deg, #02549f 0%, #002e58 100%);
+         border-radius: 5px;
+         transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      }
+      &.orange {
+         &::after {
+            background: linear-gradient(137.52deg, #de5000 -21.01%, #5e2200 113.7%);
+         }
+      }
+   }
+   &__icon {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+   }
+   &__text {
+      font-weight: 600;
+      font-size: rem(15);
+      line-height: math.div(18, 15);
+      position: relative;
+      z-index: 2;
+   }
+   &:hover {
+      box-shadow: 0px 4px 20px rgba(2, 80, 152, 0.5);
+   }
+   &:active {
+      transition: all 0.1s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      box-shadow: none;
+      .button-icon__row::after {
+         width: 100%;
+      }
+   }
+
+   &._fw {
+      width: 100%;
+   }
+}

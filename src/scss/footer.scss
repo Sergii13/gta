@@ -1,0 +1,174 @@
+//====================================================================================================
+.footer {
+   background: #002e58;
+   border-top: 2px solid #002343;
+   // .footer__container
+   &__container {
+   }
+   // .footer__top
+   &__top {
+      display: flex;
+      align-items: center;
+      padding: rem(20) 0;
+      gap: rem(30);
+   }
+   // .footer__left
+   &__left {
+      display: flex;
+      align-items: center;
+      gap: rem(10);
+   }
+   // .footer__logo
+   &__logo {
+      max-width: rem(165);
+      flex-shrink: 0;
+   }
+   // .footer__text
+   &__text {
+   }
+   // .footer__buttons
+   &__buttons {
+      display: flex;
+      align-items: center;
+      gap: rem(16);
+   }
+   // .footer__button
+   &__button {
+      padding: 0 rem(25);
+   }
+   // .footer__navigation
+   &__navigation {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-left: 2px solid #003668;
+      position: relative;
+      &::after,
+      &::before {
+         content: "";
+         width: 200vw;
+         height: 2px;
+         background: #003668;
+         position: absolute;
+         left: -50vw;
+         top: 0;
+      }
+      &::before {
+         bottom: 0;
+         top: auto;
+      }
+   }
+   // .footer__column
+   &__column {
+      text-align: center;
+      border-right: 2px solid #003668;
+      padding: rem(15);
+   }
+   // .footer__title
+   &__title {
+      line-height: math.div(18, 15);
+      font-weight: 600;
+      background: linear-gradient(90deg, #02549f 0%, #006aca 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      text-transform: uppercase;
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+      }
+   }
+   // .footer__list
+   &__list {
+      li {
+         a {
+            line-height: math.div(18, 15);
+            transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+            @media (any-hover: hover) {
+               &:hover {
+                  color: #006aca;
+               }
+            }
+         }
+         &:not(:last-child) {
+            margin-bottom: rem(10);
+         }
+      }
+   }
+   // .footer__list-socials
+   &__list-socials {
+      li {
+         a {
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+            @media (any-hover: hover) {
+               &:hover {
+                  color: #006aca;
+               }
+            }
+         }
+         &:not(:last-child) {
+            margin-bottom: rem(3);
+         }
+      }
+   }
+   // .footer__soc-icon
+   &__soc-icon {
+      width: 25px;
+      height: 25px;
+      flex-shrink: 0;
+   }
+   // .footer__soc-text
+   &__soc-text {
+      margin-left: rem(-10);
+   }
+   // .footer__bottom
+   &__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: rem(20) 0;
+   }
+   // .footer__support
+   &__support {
+      font-size: 11px;
+      line-height: 13px;
+      text-transform: uppercase;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (any-hover: hover) {
+         &:hover {
+            color: #006aca;
+         }
+      }
+   }
+   // .footer__copy
+   &__copy {
+      text-align: center;
+      font-size: 11px;
+      line-height: 13px;
+      text-transform: uppercase;
+      p {
+         &:not(:last-child) {
+            margin-bottom: rem(5);
+         }
+      }
+   }
+   // .footer__payments
+   &__payments {
+      display: flex;
+      gap: rem(11);
+   }
+   // .footer__payment
+   &__payment {
+      width: rem(65);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: rem(44);
+      background: #003668;
+      border-radius: 8px;
+      padding: rem(2) rem(4);
+   }
+}
+
+//====================================================================================================
