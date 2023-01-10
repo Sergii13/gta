@@ -80,13 +80,37 @@
    &__link {
       padding: 0 rem(15);
       line-height: math.div(18, 15);
+      display: inline-block;
       transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
       @media (max-width: em(1120)) {
          padding: 0 rem(7);
       }
+      &.active {
+         position: relative;
+         color: #0085ff;
+         transform: translateY(-10px);
+         &::after {
+            content: "";
+            opacity: 0.3;
+            background: #0085ff;
+            position: absolute;
+            left: 50%;
+            bottom: -26px;
+            height: 2px;
+            transform: translateX(-50%);
+            width: calc(100% - 25px);
+         }
+         @media (max-width: $tablet) {
+            &::after {
+               bottom: -4px;
+               width: 100%;
+            }
+            transform: translateY(0px);
+         }
+      }
       @media (any-hover: hover) {
          &:hover {
-            color: $orange;
+            color: #0085ff;
          }
       }
    }

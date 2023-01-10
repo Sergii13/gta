@@ -106,6 +106,9 @@ body {
       z-index: 2;
    }
 }
+.page_magazine {
+   background: url("@img/magazine/01.jpg") 0 0 / cover no-repeat;
+}
 /*
 (i) Стилі будуть застосовуватись до
 всіх класів, що містять *__container

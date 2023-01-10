@@ -29,7 +29,7 @@
       }
       &._form-error {
          .form__label {
-            color: red;
+            color: #fff;
          }
       }
    }
@@ -78,7 +78,7 @@
 
 // <CHECK>
 // Сніппет (HTML): chk
-// @import "checkbox";
+@import "checkbox";
 
 // <RADIO>
 // Сніппет (HTML): opt
