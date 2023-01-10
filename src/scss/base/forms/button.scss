@@ -53,22 +53,24 @@
       width: 100%;
    }
    &_orange {
-      &:hover {
-         &::after {
-            background-image: linear-gradient(90deg, #ff5c00 0%, #fb5a00 100%),
-               linear-gradient(
-                  108.74deg,
-                  rgba(255, 255, 255, 0.135) 36.46%,
-                  rgba(255, 255, 255, 0.075) 73.96%,
-                  rgba(13, 220, 170, 0.0615) 100%
-               );
-         }
+      @media (any-hover: hover) {
+         &:hover {
+            &::after {
+               background-image: linear-gradient(90deg, #ff5c00 0%, #fb5a00 100%),
+                  linear-gradient(
+                     108.74deg,
+                     rgba(255, 255, 255, 0.135) 36.46%,
+                     rgba(255, 255, 255, 0.075) 73.96%,
+                     rgba(13, 220, 170, 0.0615) 100%
+                  );
+            }
 
-         .button__row {
-            width: rem(25);
-            img {
-               width: 25px;
-               padding-right: 0;
+            .button__row {
+               width: rem(25);
+               img {
+                  width: 25px;
+                  padding-right: 0;
+               }
             }
          }
       }
@@ -176,15 +178,17 @@
       }
    }
    &.download {
-      &:hover {
-         justify-content: center;
+      @media (any-hover: hover) {
+         &:hover {
+            justify-content: center;
 
-         .button-icon__row {
-            width: rem(40);
-         }
-         .button-icon__icon {
-            width: 40px;
-            padding-right: 0;
+            .button-icon__row {
+               width: rem(40);
+            }
+            .button-icon__icon {
+               width: 40px;
+               padding-right: 0;
+            }
          }
       }
       &:active {
