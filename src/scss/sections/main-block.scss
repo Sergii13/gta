@@ -1,10 +1,12 @@
 .main-block {
-   min-height: rem(900);
    background: url("@img/main-img/bg-main.svg") 0 0 / cover no-repeat;
+   @media (max-width: $mobile) {
+      background: url("@img/main-block/bg.svg") 0 0 / cover no-repeat;
+   }
 }
 .main-block {
-   padding-top: rem(226);
-   padding-bottom: rem(144);
+   @include adaptiveValue("padding-top", 226, 111, 0, 1440, 768);
+   @include adaptiveValue("padding-bottom", 144, 60, 0, 1440, 768);
    position: relative;
    overflow: hidden;
    &::after {
@@ -23,6 +25,13 @@
       top: 0;
       transform: translateX(-50%);
       pointer-events: none;
+      @media (max-width: $tablet) {
+         height: auto;
+         width: 100vw;
+         img {
+            width: 100%;
+         }
+      }
    }
    // .main-block__down-scroll
    &__down-scroll {
@@ -33,10 +42,13 @@
       flex-direction: column;
       align-items: center;
       gap: rem(5);
-      z-index: 4;
+      z-index: 3;
       opacity: 0.5;
       line-height: math.div(18, 15);
       transform: translate(-50%, 0);
+      @media (max-width: $mobile) {
+         display: none;
+      }
       img {
          animation: 1.5s anim-arrow infinite linear;
       }
@@ -47,12 +59,18 @@
    // .main-block__row
    &__row {
       display: flex;
+      @media (max-width: $mobile) {
+         flex-direction: column;
+      }
    }
    // .main-block__content
    &__content {
       max-width: rem(540);
       position: relative;
       z-index: 2;
+      @media (max-width: $mobile) {
+         max-width: 100%;
+      }
    }
    // .main-block__title
    &__title {
@@ -61,20 +79,34 @@
       line-height: math.div(61, 50);
       text-transform: uppercase;
       padding-top: rem(15);
+      @media (max-width: $mobile) {
+         padding-top: rem(10);
+         font-size: rem(35);
+      }
       &-decor {
          top: 0px;
+         width: 100%;
          left: -15px;
          position: absolute;
          color: rgba(255, 255, 255, 0);
          -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+         @media (max-width: $mobile) {
+            left: -10px;
+         }
       }
       &:not(:last-child) {
          margin-bottom: rem(15);
+         @media (max-width: $mobile) {
+            margin-bottom: rem(30);
+         }
       }
    }
    &__text {
       line-height: math.div(18, 15);
       max-width: rem(445);
+      @media (max-width: $mobile) {
+         max-width: 100%;
+      }
       span {
          font-weight: 600;
          color: #e3e700;
@@ -90,6 +122,10 @@
       flex-wrap: wrap;
       &:not(:last-child) {
          margin-bottom: rem(100);
+
+         @media (max-width: $mobile) {
+            margin-bottom: rem(20);
+         }
       }
    }
    // .main-block__button
@@ -107,6 +143,29 @@
       right: 0;
       right: -140px;
       @include adaptiveValue("max-width", 943, 350, 0, 1440, 375);
+      @media (max-width: $mobile) {
+         position: relative;
+         right: 0;
+         bottom: 0;
+         max-width: none;
+         width: 440px;
+         margin: 0 auto 30px;
+         &::after {
+            content: "";
+            width: 482px;
+            background: linear-gradient(180deg, #d74d00 0%, #431800 100%);
+            filter: blur(12.5px);
+            transform: translate(-50%, 50%) rotate(0deg);
+            bottom: 0;
+            left: 50%;
+            position: absolute;
+            height: 55px;
+            border-radius: 50%;
+         }
+         @media (max-width: em(370)) {
+            width: 370px;
+         }
+      }
    }
 }
 
@@ -161,7 +220,10 @@
    &__items {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: rem(30);
+      gap: rem(15) rem(30);
+      @media (max-width: $mobileSmall) {
+         grid-template-columns: repeat(1, 1fr);
+      }
    }
    // .monitoring-main__item
    &__item {

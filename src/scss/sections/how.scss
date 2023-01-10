@@ -1,9 +1,13 @@
 .how {
-   background: url("@img/how/bg.svg") 0 0 / cover no-repeat;
+   background: url("@img/how/bg.svg") center top / cover no-repeat;
    border-top: 2px solid #09263f;
    position: relative;
    padding: rem(33) 0 0;
    overflow: hidden;
+   @media (max-width: $mobile) {
+      padding: rem(53) 0 rem(30);
+      background: url("@img/how/bg2.svg") center top / cover no-repeat;
+   }
    &::after {
       content: "";
       width: 100%;
@@ -24,6 +28,9 @@
       justify-content: center;
       &:not(:last-child) {
          margin-bottom: rem(57);
+         @media (max-width: $mobile) {
+            margin-bottom: rem(65);
+         }
       }
    }
    // .how__title
@@ -34,6 +41,10 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: rem(13);
+      @media (max-width: $tablet) {
+         grid-template-columns: repeat(1, 1fr);
+         gap: rem(55);
+      }
       &:not(:last-child) {
          margin-bottom: rem(41);
       }
@@ -43,6 +54,10 @@
       display: flex;
       align-items: flex-start;
       position: relative;
+      @media (max-width: $tablet) {
+         max-width: rem(270);
+         margin-left: rem(80);
+      }
       &:not(:last-child) {
          &::after {
             pointer-events: none;
@@ -57,6 +72,13 @@
             left: 30px;
             background: url("@img/how/line01.svg ") center / contain no-repeat;
             bottom: calc(100% + 20px);
+            @media (max-width: $tablet) {
+               background: url("@img/how/mob01.svg ") center / contain no-repeat;
+               width: 63px;
+               height: 77px;
+               bottom: -65px;
+               left: 0px;
+            }
          }
       }
       &:nth-child(2) {
@@ -64,8 +86,15 @@
             width: percent(304, 269);
             height: 92px;
             left: -10px;
-            background: url("@img/how/line02.svg ") center / contain no-repeat;
+            background: url("@img/how/line02.svg") center / contain no-repeat;
             bottom: -25px;
+            @media (max-width: $tablet) {
+               background: url("@img/how/mob02.svg") center / contain no-repeat;
+               height: 88px;
+               width: 55px;
+               bottom: -30px;
+               left: -54px;
+            }
          }
       }
       &:nth-child(3) {
@@ -73,12 +102,23 @@
             width: percent(253, 269);
             height: 30px;
             left: 20px;
-            background: url("@img/how/line03.svg ") center / contain no-repeat;
+            background: url("@img/how/line03.svg") center / contain no-repeat;
             bottom: calc(100% + 20px);
+            @media (max-width: $tablet) {
+               background: url("@img/how/mob03.svg") center / contain no-repeat;
+               width: 67px;
+               height: 97px;
+               left: 0px;
+               bottom: -56px;
+            }
          }
       }
       &:nth-child(odd) {
          margin-top: 30px;
+         @media (max-width: $tablet) {
+            margin-top: 0;
+            margin-left: 0;
+         }
       }
    }
    &__step-text {
@@ -115,9 +155,35 @@
    &__buttons {
       display: flex;
       justify-content: space-between;
-      gap: rem(10);
+      position: relative;
+      z-index: 2;
+      gap: rem(20) rem(10);
+      @media (max-width: em(650)) {
+         flex-direction: column;
+         align-items: flex-start;
+      }
       &:not(:last-child) {
          margin-bottom: rem(10);
+      }
+   }
+   &__download {
+      display: inline-flex;
+      align-items: center;
+      gap: rem(10);
+   }
+   &__windows-mobile {
+      display: inline-flex;
+      align-items: center;
+      gap: rem(5);
+      font-size: rem(13);
+      line-height: math.div(16, 13);
+      img {
+         width: 25px;
+         height: 25px;
+         flex-shrink: 0;
+      }
+      @media (min-width: em(650)) {
+         display: none;
       }
    }
    // .how__button
@@ -128,6 +194,9 @@
       font-size: rem(13);
       line-height: math.div(16, 13);
       transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (max-width: em(650)) {
+         display: none;
+      }
       @media (any-hover: hover) {
          &:hover {
             color: #0085ff;
@@ -139,23 +208,32 @@
       position: relative;
       filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
       pointer-events: none;
+      @media (max-width: em(375)) {
+         margin-bottom: rem(20);
+      }
       img {
          position: relative;
          z-index: 2;
       }
-      margin-top: rem(-80);
+      margin-top: -7%;
    }
    // .how__button-decor
    &__button-decor {
       position: absolute;
       z-index: 3;
+      @media (max-width: em(650)) {
+         max-width: rem(50);
+      }
       &.one {
-         bottom: 100px;
-         right: 200px;
+         bottom: 15%;
+         right: 22%;
       }
       &.two {
-         bottom: 150px;
-         right: 300px;
+         bottom: 17%;
+         right: 18%;
+         @media (max-width: em(650)) {
+            right: 21%;
+         }
       }
    }
    // .how__decor-line
@@ -166,13 +244,11 @@
       top: 50%;
       left: -30vw;
       transform: translate(0, -50%) rotate(-1deg);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       background: linear-gradient(108.74deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+      @media (max-width: em(650)) {
+         transform: translate(0, -50%) rotate(-5deg);
+         height: rem(170);
+      }
    }
-}
-
-.orange {
-}
-.one {
-}
-.two {
 }

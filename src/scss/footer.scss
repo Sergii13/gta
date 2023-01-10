@@ -11,6 +11,11 @@
       align-items: center;
       padding: rem(20) 0;
       gap: rem(30);
+      @media (max-width: $tablet) {
+         padding: rem(30) 0 rem(15);
+         flex-direction: column;
+         gap: rem(15);
+      }
    }
    // .footer__left
    &__left {
@@ -22,6 +27,9 @@
    &__logo {
       max-width: rem(165);
       flex-shrink: 0;
+      @media (max-width: $mobileSmall) {
+         max-width: rem(119);
+      }
    }
    // .footer__text
    &__text {
@@ -30,11 +38,22 @@
    &__buttons {
       display: flex;
       align-items: center;
-      gap: rem(16);
+      gap: rem(10);
+      @media (max-width: $tablet) {
+         align-self: flex-start;
+      }
+      @media (max-width: $mobile) {
+         gap: rem(17) rem(25);
+         flex-wrap: wrap;
+         width: 100%;
+      }
    }
    // .footer__button
    &__button {
-      padding: 0 rem(25);
+      padding: 0 rem(15);
+      @media (max-width: $mobile) {
+         width: calc(50% - 12.5px);
+      }
    }
    // .footer__navigation
    &__navigation {
@@ -42,6 +61,12 @@
       grid-template-columns: repeat(3, 1fr);
       border-left: 2px solid #003668;
       position: relative;
+      @media (max-width: em(650)) {
+         grid-template-columns: repeat(1, 1fr);
+         border: none;
+         gap: rem(30);
+         padding: rem(30) 0;
+      }
       &::after,
       &::before {
          content: "";
@@ -62,6 +87,10 @@
       text-align: center;
       border-right: 2px solid #003668;
       padding: rem(15);
+      @media (max-width: em(650)) {
+         border: none;
+         padding: 0;
+      }
    }
    // .footer__title
    &__title {
@@ -128,6 +157,11 @@
       align-items: center;
       justify-content: space-between;
       padding: rem(20) 0;
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         gap: rem(10);
+         padding: rem(30) 0 rem(15);
+      }
    }
    // .footer__support
    &__support {
@@ -156,7 +190,12 @@
    // .footer__payments
    &__payments {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: rem(11);
+      @media (max-width: $mobileSmall) {
+         max-width: rem(250);
+      }
    }
    // .footer__payment
    &__payment {

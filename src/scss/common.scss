@@ -35,11 +35,19 @@
    position: relative;
    display: inline-block;
    padding-top: rem(20);
+   @media (max-width: $mobile) {
+      font-size: rem(27);
+      padding-top: rem(10);
+   }
    &__decor {
       top: 0px;
       left: -20px;
+      width: 100%;
       position: absolute;
       color: rgba(255, 255, 255, 0);
       -webkit-text-stroke: 1px rgba(255, 255, 255, 0.05);
+      @media (max-width: $mobile) {
+         left: -10px;
+      }
    }
 }

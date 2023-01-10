@@ -1,6 +1,9 @@
 .news {
    padding: rem(30) 0 rem(40);
    position: relative;
+   @media (max-width: $mobile) {
+      padding-bottom: rem(25);
+   }
    // .news__gerb
    &__gerb {
       position: absolute;
@@ -8,6 +11,10 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
+      @media (max-width: $mobile) {
+         width: 100vw;
+         top: 83px;
+      }
    }
    // .news__container
    &__container {
@@ -25,6 +32,9 @@
       }
       &:not(:last-child) {
          margin-bottom: rem(50);
+         @media (max-width: $mobile) {
+            margin-bottom: rem(30);
+         }
       }
    }
    // .news__title
@@ -35,18 +45,43 @@
    }
    // .news__slider
    &__slider {
+      @media (max-width: em(870)) {
+         overflow: visible !important;
+      }
    }
    // .news__wrapper
    &__wrapper {
    }
    // .news__slide
    &__slide {
+      @media (max-width: em(870)) {
+         width: rem(285);
+      }
    }
    // .news__card
    &__card {
    }
    // .news__pagination
    &__pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: rem(8);
+      margin-top: rem(30);
+      @media (min-width: em(1200)) {
+         display: none;
+      }
+      .swiper-pagination-bullet {
+         width: 8px;
+         height: 8px;
+         border-radius: 8px;
+         transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+         background: rgba(255, 255, 255, 0.6);
+         &.swiper-pagination-bullet-active {
+            width: 28px;
+            background: rgba(255, 255, 255, 1);
+         }
+      }
    }
    // .news__arrows
    &__arrows {
@@ -59,6 +94,12 @@
       justify-content: space-between;
       width: calc(100% + 120px);
       left: 50%;
+      @media (max-width: em(1250)) {
+         width: calc(100vw - 10px);
+      }
+      @media (max-width: em(1200)) {
+         display: none;
+      }
    }
    // .news__arrow
    &__arrow {
@@ -97,6 +138,9 @@
       height: rem(200);
       display: block;
       overflow: hidden;
+      @media (max-width: $mobile) {
+         height: rem(162);
+      }
       @media (any-hover: hover) {
          &:hover {
             img {
@@ -125,6 +169,9 @@
       text-transform: uppercase;
       display: inline-block;
       transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (max-width: $tablet) {
+         font-size: rem(17);
+      }
       @media (any-hover: hover) {
          &:hover {
             color: #0085ff;

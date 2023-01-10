@@ -6,6 +6,10 @@
    width: 100%;
    z-index: 3;
    padding: rem(18) 0;
+   @media (max-width: $tablet) {
+      z-index: 5;
+   }
+
    // .header__container
    &__container {
       display: flex;
@@ -18,6 +22,9 @@
       display: inline-block;
       max-width: rem(120);
       transform: translateY(-10px);
+      @media (max-width: $mobile) {
+         max-width: rem(100);
+      }
    }
    // .header__menu
    &__menu {
@@ -35,12 +42,36 @@
       display: flex;
       align-items: flex-end;
       gap: rem(30);
+      @media (max-width: em(1050)) {
+         gap: rem(15);
+      }
+      @media (max-width: $tablet) {
+         align-items: center;
+         gap: rem(20);
+         position: fixed;
+         height: 100%;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         z-index: 4;
+         transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+         background: linear-gradient(90deg, #02549f 0%, #002e58 100%);
+         padding: rem(64) rem(15);
+         flex-direction: column;
+      }
    }
    // .menu__list
    &__list {
       display: flex;
       padding-bottom: rem(15);
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      @media (max-width: $tablet) {
+         flex-direction: column;
+         padding-bottom: 0;
+         gap: rem(20);
+         border: none;
+         text-align: center;
+      }
    }
    // .menu__item
    &__item {
@@ -50,6 +81,9 @@
       padding: 0 rem(15);
       line-height: math.div(18, 15);
       transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      @media (max-width: em(1120)) {
+         padding: 0 rem(7);
+      }
       @media (any-hover: hover) {
          &:hover {
             color: $orange;
@@ -60,11 +94,23 @@
    &__socials {
    }
 }
-.icon-menu {
+.menu-open {
+   .menu__body {
+      left: 0;
+   }
+   .icon-menu {
+      transform: translateY(-20px);
+   }
 }
 .socials {
    display: flex;
    gap: rem(15);
+   @media (max-width: em(1120)) {
+      gap: rem(7);
+   }
+   @media (max-width: $tablet) {
+      gap: rem(15);
+   }
    li {
       a {
          display: flex;
@@ -102,6 +148,12 @@
    &__button {
       min-width: rem(160);
       background: linear-gradient(90deg, #02549f 0%, #002e58 100%);
+      @media (max-width: em(1100)) {
+         min-width: rem(110);
+      }
+      @media (max-width: $tablet) {
+         min-width: rem(160);
+      }
       .button-icon__row::after {
          transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
          background-clip: padding-box, border-box;
@@ -125,12 +177,13 @@
 
 .icon-menu {
    display: none;
-   @media (max-width: $mobile) {
+   @media (max-width: $tablet) {
       display: block;
       position: relative;
-      width: rem(30);
-      height: rem(18);
-      z-index: 5;
+      width: rem(26);
+      height: rem(20);
+      z-index: 6;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
       @media (any-hover: none) {
          cursor: default;
       }
@@ -142,8 +195,9 @@
          right: 0;
          position: absolute;
          width: 100%;
-         height: rem(2);
-         background-color: #000;
+         height: rem(3);
+         background-color: #fff;
+         border-radius: 3px;
       }
       &::before {
          top: 0;
