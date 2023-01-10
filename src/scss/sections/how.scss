@@ -1,12 +1,12 @@
 .how {
-   background: url("@img/how/bg.svg") center top / cover no-repeat;
+   background: url("@img/how/bg.jpg") center top / cover no-repeat;
    border-top: 2px solid #09263f;
    position: relative;
    padding: rem(33) 0 0;
    overflow: hidden;
    @media (max-width: $mobile) {
       padding: rem(53) 0 rem(30);
-      background: url("@img/how/bg2.svg") center top / cover no-repeat;
+      background: url("@img/how/bg2.jpg") center top / cover no-repeat;
    }
    &::after {
       content: "";
