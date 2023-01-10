@@ -1,0 +1,160 @@
+.vacancy {
+   padding-top: rem(170);
+   padding-bottom: rem(100);
+   background: url("@img/vacancy/bg.jpg") 0 0 / cover no-repeat;
+   position: relative;
+   @media (max-width: $mobile) {
+      padding-top: rem(122);
+      background: url("@img/vacancy/bg2.jpg") 0 0 / cover no-repeat;
+   }
+   &__gerb {
+      width: 540px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      img {
+         width: 100%;
+      }
+   }
+   // .vacancy__container
+   &__container {
+      position: relative;
+      z-index: 2;
+   }
+   // .vacancy__title-wrap
+   &__title-wrap {
+      text-align: center;
+      font-size: rem(50);
+      &:not(:last-child) {
+         margin-bottom: rem(10);
+         @media (max-width: $mobile) {
+            margin-bottom: rem(25);
+         }
+      }
+   }
+   // .vacancy__title
+   &__title {
+      line-height: math.div(60, 50);
+   }
+   // .vacancy__subtitle
+   &__subtitle {
+      line-height: math.div(18, 15);
+      text-align: center;
+      & .orange {
+         display: inline-block;
+         background: linear-gradient(90deg, #de5000 0%, #b34000 100%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+         text-fill-color: transparent;
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(70);
+         @media (max-width: $mobile) {
+            margin-bottom: rem(100);
+         }
+      }
+   }
+   // .vacancy__row
+   &__row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(30);
+      align-items: flex-start;
+      @media (max-width: $mobile) {
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
+   // .vacancy__current
+   &__current {
+   }
+   // .vacancy__title2
+   &__title2 {
+      font-weight: 600;
+      font-size: rem(25);
+      line-height: math.div(30, 25);
+      text-transform: uppercase;
+      & .orange {
+         display: inline-block;
+         background: linear-gradient(90deg, #de5000 0%, #b34000 100%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text;
+         text-fill-color: transparent;
+      }
+      @media (max-width: $mobile) {
+         font-size: rem(20);
+      }
+      &:not(:last-child) {
+         margin-bottom: rem(15);
+      }
+   }
+   // .vacancy__form-wrap
+   &__form-wrap {
+      @media (max-width: $mobile) {
+         order: -1;
+      }
+   }
+}
+
+.current-vacancy {
+   // .current-vacancy__items
+   &__items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(15) rem(30);
+      &:not(:last-child) {
+         margin-bottom: rem(50);
+         @media (max-width: $mobile) {
+            margin-bottom: rem(30);
+         }
+      }
+   }
+   // .current-vacancy__item
+   &__item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(108.74deg, rgba(0, 133, 255, 0.3) 0%, rgba(255, 255, 255, 0.06) 100%);
+      box-shadow: 0px 0px 50px -25px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(50px);
+      border-radius: 5px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      padding: rem(10);
+      text-align: center;
+      font-weight: 600;
+      line-height: math.div(18, 15);
+      min-height: rem(55);
+      flex-grow: 1;
+      width: calc(50% - 15px);
+      @media (max-width: $tablet) {
+         width: 100%;
+      }
+      &:nth-child(even) {
+         background: linear-gradient(108.74deg, rgba(255, 92, 0, 0.3) 0%, rgba(255, 255, 255, 0.06) 100%);
+      }
+   }
+   ul {
+      li {
+         display: flex;
+         align-items: flex-start;
+         gap: rem(10);
+         &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: #de5000;
+            box-shadow: 0px 1px 100px rgba(222, 80, 0, 0.8);
+            flex-shrink: 0;
+            border-radius: 50%;
+            position: relative;
+            top: 4px;
+         }
+         line-height: math.div(18, 15);
+         &:not(:last-child) {
+            margin-bottom: rem(10);
+         }
+      }
+   }
+}

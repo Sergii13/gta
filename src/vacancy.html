@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Вакансії"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+         <section class="vacancy">
+            <div class="vacancy__gerb">
+               <img src="@img/main-block/gerb.svg" alt="">
+            </div>
+            <div class="vacancy__container">
+               <div class="vacancy__title-wrap">
+                  <h2 class="title vacancy__title">
+                     <span class="title__decor">
+                        Ти розробник чи моделлер?
+                     </span>
+                     Ти розробник чи <br> моделлер?
+                  </h2>
+               </div>
+               <div class="vacancy__subtitle">
+                  <p>Приєднуйся до команди <span class="orange">
+                        досвідчених
+                     </span> фахівців і втілюй свої бажання!</p>
+               </div>
+               <div class="vacancy__row">
+                  <div class="vacancy__current current-vacancy">
+                     <div class="vacancy__title2">
+                        Доступні вакансії:
+                     </div>
+                     <div class="current-vacancy__items">
+                        <div class="current-vacancy__item">
+                           lua розробник
+                        </div>
+                        <div class="current-vacancy__item">
+                           3D моделлер: будівель,
+                           транспорту, скінів
+                        </div>
+                        <div class="current-vacancy__item">
+                           Розробник C#, C++
+                        </div>
+                     </div>
+                     <div class="vacancy__title2">
+                        Чому <span class="orange"> тобі</span> треба працювати з нами?
+                     </div>
+                     <ul>
+                        <li>
+                           Ти працюватимеш у досвідченій і дуже дружній команді, зможеш набратися нового досвіду та
+                           дізнатися про всі тонкощі роботи!
+                        </li>
+                        <li>
+                           Офіційне працевлаштування!
+                        </li>
+                        <li>
+                           Високу заробітну плату яка складається зі ставки та бонусів!
+                        </li>
+                        <li>
+                           Зручний графік роботи, оплачувана лікарняна та кофмотрна
+                           відпустка!
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="vacancy__form-wrap">
+                     <div class="vacancy__title2">
+                        приєднайтесь до команди
+                     </div>
+                     <form action="#" class="form">
+                        <div class="form__items">
+                           <div class="form__item _form-error">
+                              <input id="phone" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                                 placeholder="" class="input _form-error">
+                              <label for="phone" class="form__label">
+                                 Ваш номер телефону
+                              </label>
+                           </div>
+                           <div class="form__item">
+                              <textarea id="text" class="input"></textarea>
+                              <label for="text" class="form__label">
+                                 Напишіть ваш досвід роботи та сферу
+                              </label>
+                           </div>
+                           <div class="form__item">
+                              <input id="telegram" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                                 placeholder="" class="input">
+                              <label for="telegram" class="form__label">
+                                 Ваш телеграм
+                              </label>
+                           </div>
+                        </div>
+                        <button class="button-icon vacancy__button">
+                           <div class="button-icon__row">
+                              <span class="button-icon__icon">
+                                 <img src="@img/svg/play.svg" alt="">
+                              </span>
+                              <span class="button-icon__text">
+                                 Відправити форму
+                              </span>
+                           </div>
+                        </button> <br>
+                        <a href="" class="form__complete">
+                           <span>
+                              <img src="@img/svg/check.svg" alt="">
+                              Відправлено
+                           </span>
+                        </a>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
+</html>
