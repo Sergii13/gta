@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Ігровий магазин"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{
+      "class":"active"
+      })
+      <main class="page page_magazine">
+         <section class="donate">
+            <div class="donate__gerb">
+               <img src="@img/main-block/gerb.svg" alt="">
+            </div>
+            <div class="donate__container">
+               <div class="donate__row">
+                  <div class="donate__content">
+                     <div class="donate__head">
+                        <h2 class="donate__title">
+                           Donate
+                        </h2>
+                        <div class="donate__coins">
+                           <img src="@img/svg/coin.svg" alt="">
+                           <span>The X2 Donate promotion is now active</span>
+                        </div>
+
+                     </div>
+                     <form action="#" class="form">
+                        <div class="form__items">
+                           <div class="form__item ">
+                              <input id="phone" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                                 placeholder="" class="input ">
+                              <label for="phone" class="form__label">
+                                 Your nickname or ID
+                              </label>
+                           </div>
+
+                           <div class="form__item">
+                              <input id="price" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                                 placeholder="" class="input">
+                              <label for="price" class="form__label">
+                                 Amount in hryvnias
+                              </label>
+                           </div>
+                           <div class="form__item">
+                              <select name="form[]" data-class-modif="server" data-pseudo-label="Select a server"
+                                 class="form">
+                                 <option value="1" selected>Central Ukraine #1</option>
+                                 <option value="2">Central Ukraine #1</option>
+                                 <option value="3">Central Ukraine #1</option>
+                                 <option value="4">Central Ukraine #1</option>
+                              </select>
+                           </div>
+                           <div class="form__item">
+                              <div class="checkbox">
+                                 <input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+                                    name="form[]">
+                                 <label for="c_1" class="checkbox__label"><span class="checkbox__text">I agree with the
+                                       offer contract</span></label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="form__bottom">
+                           <button class="button-icon vacancy__button">
+                              <div class="button-icon__row">
+                                 <span class="button-icon__icon">
+                                    <img src="@img/svg/play.svg" alt="">
+                                 </span>
+                                 <span class="button-icon__text">
+                                    Continue
+                                 </span>
+                              </div>
+                           </button>
+                           <a href="" class="form__link">
+                              Top-up problems?
+                           </a>
+                        </div>
+                        <br>
+                     </form>
+                     <div class="donate__banner banner-donate">
+                        <div class="banner-donate__flag">
+                           <img src="@img/magazine/flag.png" alt="">
+                        </div>
+                        <div class="banner-donate__row">
+                           <div class="banner-donate__content">
+                              <div class="banner-donate__subtitle">
+                                 Sent to the Armed Forces:
+                              </div>
+                              <div class="banner-donate__sum">
+                                 300.000₴
+                              </div>
+                              <div class="banner-donate__text">
+                                 <p>50% of the open cases go to help the Armed Forces! GLORY TO UKRAINE!</p>
+                              </div>
+                           </div>
+                           <div class="banner-donate__image">
+                              <img srcset="@img/magazine/man@2x.png 2x" src="@img/magazine/man.png" alt="">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div data-da=".donate__content,991,2" data-prlx-a="40" data-prlx-cy="200" data-prlx-cx="200"
+                     data-prlx-mouse class="donate__image">
+                     <img srcset="@img/magazine/image-main@2x.png 2x" src="@img/magazine/image-main.png" alt="">
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="case">
+            <div class="case__container">
+               <div class="case__head">
+                  <div class="case__title-wrap">
+                     <h2 class="title case__title">
+                        <span class="title__decor">
+                           cases
+                        </span>
+                        кейси
+                     </h2>
+                  </div>
+                  <div class="case__head-info">
+                     <p> <span class="orange">
+                           50%
+                        </span> of the open cases go to help the Armed Forces! GLORY TO UKRAINE!</p>
+                  </div>
+               </div>
+               <div class="case__grid">
+                  <div class="case-card">
+                     <div class="case-card__top">
+                        <a href="" class="case-card__link">
+                           Presidential case
+                        </a>
+                        <a href="" class="case-card__image">
+                           <img srcset="@img/magazine/001@2x.png 2x" src="@img/magazine/001.png" alt="">
+                        </a>
+                        <div class="case-card__text">
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                              ut
+                              labore...</p>
+                        </div>
+                     </div>
+                     <div class="case-card__bottom">
+                        <a data-sum="499" href="" class="case-card__button">
+                           <img src="@img/svg/monet.svg" alt="">
+                           <span>buy</span>
+                        </a>
+                        <div class="case-card__price">
+                           499₴
+                        </div>
+                     </div>
+                  </div>
+                  <div class="case-card">
+                     <div class="case-card__top">
+                        <a href="" class="case-card__link">
+                           The case of Ukraine
+                        </a>
+                        <a href="" class="case-card__image">
+                           <img srcset="@img/magazine/002@2x.png 2x" src="@img/magazine/002.png" alt="">
+                        </a>
+                        <div class="case-card__text">
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                              ut
+                              labore...</p>
+                        </div>
+                     </div>
+                     <div class="case-card__bottom">
+                        <a data-sum="249" href="" class="case-card__button">
+                           <img src="@img/svg/monet.svg" alt="">
+                           <span>buy</span>
+                        </a>
+                        <div class="case-card__price">
+                           249₴
+                        </div>
+                     </div>
+                  </div>
+                  <div class="case-card">
+                     <div class="case-card__top">
+                        <a href="" class="case-card__link">
+                           Case javelin
+                        </a>
+                        <a href="" class="case-card__image">
+                           <img srcset="@img/magazine/003@2x.png 2x" src="@img/magazine/003.png" alt="">
+                        </a>
+                        <div class="case-card__text">
+                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                              ut
+                              labore...</p>
+                        </div>
+                     </div>
+                     <div class="case-card__bottom">
+                        <a data-sum="249" href="" class="case-card__button">
+                           <img src="@img/svg/monet.svg" alt="">
+                           <span>buy</span>
+                        </a>
+                        <div class="case-card__price">
+                           249₴
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="case">
+            <div class="case__container">
+               <div class="case__head">
+                  <div class="case__title-wrap">
+                     <h2 class="title case__title">
+                        <span class="title__decor">
+                           Skins
+                        </span>
+                        Skins
+                     </h2>
+                  </div>
+               </div>
+               <div class="case__grid">
+                  <div class="case-card">
+                     <div class="case-card__top">
+                        <a href="" class="case-card__link">
+                           Zelensky's skin
+                        </a>
+                        <a href="" class="case-card__image">
+                           <img srcset="@img/magazine/004@2x.png 2x" src="@img/magazine/004.png" alt="">
+                        </a>
+
+                     </div>
+                     <div class="case-card__bottom">
+                        <a data-sum="499" href="" class="case-card__button">
+                           <img src="@img/svg/monet.svg" alt="">
+                           <span>buy</span>
+                        </a>
+                        <div class="case-card__price">
+                           499₴
+                        </div>
+                     </div>
+                  </div>
+                  <div class="case-card">
+                     <div class="case-card__top">
+                        <a href="" class="case-card__link">
+                           Arestovich's skin
+                        </a>
+                        <a href="" class="case-card__image">
+                           <img srcset="@img/magazine/005@2x.png 2x" src="@img/magazine/005.png" alt="">
+                        </a>
+                     </div>
+                     <div class="case-card__bottom">
+                        <a data-sum="249" href="" class="case-card__button">
+                           <img src="@img/svg/monet.svg" alt="">
+                           <span>buy</span>
+                        </a>
+                        <div class="case-card__price">
+                           249₴
+                        </div>
+                     </div>
+                  </div>
+                  <div class="case-card">
+                     <div class="case-card__top">
+                        <a href="" class="case-card__link">
+                           Poroshenko's skin
+                        </a>
+                        <a href="" class="case-card__image">
+                           <img srcset="@img/magazine/006@2x.png 2x" src="@img/magazine/006.png" alt="">
+                        </a>
+                     </div>
+                     <div class="case-card__bottom">
+                        <a data-sum="249" href="" class="case-card__button">
+                           <img src="@img/svg/monet.svg" alt="">
+                           <span>buy</span>
+                        </a>
+                        <div class="case-card__price">
+                           249₴
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="case">
+            <div class="case__container">
+               <div class="case__head">
+                  <div class="case__title-wrap">
+                     <h2 class="title case__title">
+                        <span class="title__decor">
+                           Cars
+                        </span>
+                        Cars
+                     </h2>
+                  </div>
+               </div>
+               <div class="case__grid">
+                  <div class="case-card">
+                     <div class="case-card__top">
+                        <a href="" class="case-card__link">
+                           Zelensky's skin
+                        </a>
+                        <a href="" class="case-card__image">
+                           <img srcset="@img/magazine/004@2x.png 2x" src="@img/magazine/004.png" alt="">
+                        </a>
+
+                     </div>
+                     <div class="case-card__bottom">
+                        <a data-sum="499" href="" class="case-card__button">
+                           <img src="@img/svg/monet.svg" alt="">
+                           <span>buy</span>
+                        </a>
+                        <div class="case-card__price">
+                           499₴
+                        </div>
+                     </div>
+                  </div>
+                  <div class="case-card">
+                     <div class="case-card__top">
+                        <a href="" class="case-card__link">
+                           Arestovich's skin
+                        </a>
+                        <a href="" class="case-card__image">
+                           <img srcset="@img/magazine/004@2x.png 2x" src="@img/magazine/004.png" alt="">
+                        </a>
+                     </div>
+                     <div class="case-card__bottom">
+                        <a data-sum="249" href="" class="case-card__button">
+                           <img src="@img/svg/monet.svg" alt="">
+                           <span>buy</span>
+                        </a>
+                        <div class="case-card__price">
+                           249₴
+                        </div>
+                     </div>
+                  </div>
+                  <div class="case-card">
+                     <div class="case-card__top">
+                        <a href="" class="case-card__link">
+                           Poroshenko's skin
+                        </a>
+                        <a href="" class="case-card__image">
+                           <img srcset="@img/magazine/004@2x.png 2x" src="@img/magazine/004.png" alt="">
+                        </a>
+                     </div>
+                     <div class="case-card__bottom">
+                        <a data-sum="249" href="" class="case-card__button">
+                           <img src="@img/svg/monet.svg" alt="">
+                           <span>buy</span>
+                        </a>
+                        <div class="case-card__price">
+                           249₴
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="case pb-90">
+            <div class="case__container">
+               <div class="case__head">
+                  <div class="case__title-wrap">
+                     <h2 class="title case__title">
+                        <span class="title__decor">
+                           Other
+                        </span>
+                        Other
+                     </h2>
+                  </div>
+               </div>
+               <div class="case__grid">
+                  <div class="case-card">
+                     <div class="case-card__top">
+                        <a href="" class="case-card__link">
+                           Inventory expansion
+                        </a>
+                        <a href="" class="case-card__image">
+                           <img srcset="@img/magazine/007@2x.png 2x" src="@img/magazine/007.png" alt="">
+                        </a>
+
+                     </div>
+                     <div class="case-card__bottom">
+                        <a data-sum="499" href="" class="case-card__button">
+                           <img src="@img/svg/monet.svg" alt="">
+                           <span>buy</span>
+                        </a>
+                        <div class="case-card__price">
+                           499₴
+                        </div>
+                     </div>
+                  </div>
+                  <div class="case-card">
+                     <div class="case-card__top">
+                        <a href="" class="case-card__link">
+                           Slot for cars
+                        </a>
+                        <a href="" class="case-card__image">
+                           <img srcset="@img/magazine/008@2x.png 2x" src="@img/magazine/008.png" alt="">
+                        </a>
+                     </div>
+                     <div class="case-card__bottom">
+                        <a data-sum="249" href="" class="case-card__button">
+                           <img src="@img/svg/monet.svg" alt="">
+                           <span>buy</span>
+                        </a>
+                        <div class="case-card__price">
+                           249₴
+                        </div>
+                     </div>
+                  </div>
+                  <div class="case-card">
+                     <div class="case-card__top">
+                        <a href="" class="case-card__link">
+                           Unique number
+                        </a>
+                        <a href="" class="case-card__image">
+                           <img srcset="@img/magazine/009@2x.png 2x" src="@img/magazine/009.png" alt="">
+                        </a>
+                     </div>
+                     <div class="case-card__bottom">
+                        <a data-sum="249" href="" class="case-card__button">
+                           <img src="@img/svg/monet.svg" alt="">
+                           <span>buy</span>
+                        </a>
+                        <div class="case-card__price">
+                           249₴
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
+</html>

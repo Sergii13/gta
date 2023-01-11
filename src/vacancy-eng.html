@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Вакансії"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+         <section class="vacancy">
+            <div class="vacancy__gerb">
+               <img src="@img/main-block/gerb.svg" alt="">
+            </div>
+            <div class="vacancy__container">
+               <div class="vacancy__title-wrap">
+                  <h2 class="title vacancy__title">
+                     <span class="title__decor">
+                        Ти розробник чи моделлер?
+                     </span>
+                     Are you a developer <br> or modeler?
+                  </h2>
+               </div>
+               <div class="vacancy__subtitle">
+                  <p>
+                     Join the team of<span class="orange">
+                        experienced
+                     </span> specialists and make your wishes come true!
+                  </p>
+               </div>
+               <div class="vacancy__row">
+                  <div class="vacancy__current current-vacancy">
+                     <div class="vacancy__title2">
+                        Available vacancies:
+                     </div>
+                     <div class="current-vacancy__items">
+                        <div class="current-vacancy__item">
+                           lua developer
+                        </div>
+                        <div class="current-vacancy__item">
+                           3D modeler: buildings,
+                           transport, skins
+                        </div>
+                        <div class="current-vacancy__item">
+                           C#, C++ developer
+                        </div>
+                     </div>
+                     <div class="vacancy__title2">
+                        Why should <span class="orange"> you</span> work with us?
+                     </div>
+                     <ul>
+                        <li>
+                           You will work in an experienced and very friendly team, you will be able to gain new
+                           experience and learn about all the subtleties of work!
+                        </li>
+                        <li>
+                           Official employment!
+                        </li>
+                        <li>
+                           A high salary consisting of a rate and bonuses!
+                        </li>
+                        <li>
+                           Convenient work schedule, paid sick leave and sick leave
+                           vacation!
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="vacancy__form-wrap">
+                     <div class="vacancy__title2">
+                        join the team
+                     </div>
+                     <form action="#" class="form">
+                        <div class="form__items">
+                           <div class="form__item _form-error">
+                              <input id="phone" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                                 placeholder="" class="input _form-error">
+                              <label for="phone" class="form__label">
+                                 Your phone number
+                              </label>
+                           </div>
+                           <div class="form__item">
+                              <textarea id="text" class="input"></textarea>
+                              <label for="text" class="form__label">
+                                 Write your work experience and field
+                              </label>
+                           </div>
+                           <div class="form__item">
+                              <input id="telegram" autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                                 placeholder="" class="input">
+                              <label for="telegram" class="form__label">
+                                 Your telegram
+                              </label>
+                           </div>
+                        </div>
+                        <button class="button-icon vacancy__button">
+                           <div class="button-icon__row">
+                              <span class="button-icon__icon">
+                                 <img src="@img/svg/play.svg" alt="">
+                              </span>
+                              <span class="button-icon__text">
+                                 Submit the form
+                              </span>
+                           </div>
+                        </button> <br>
+                        <a href="" class="form__complete">
+                           <span>
+                              <img src="@img/svg/check.svg" alt="">
+                              Submitted
+                           </span>
+                        </a>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
+</html>
