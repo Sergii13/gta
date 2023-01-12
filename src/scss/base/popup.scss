@@ -72,12 +72,25 @@ body::after {
          right: 10px;
       }
    }
+   &_ok {
+      .popup__content {
+         max-width: rem(329);
+      }
+      .popup__item {
+         border: none !important;
+         margin-bottom: 0 !important;
+         padding-bottom: 0 !important;
+      }
+   }
    // .popup__content
    &__content {
       position: relative;
-      min-height: rem(250);
+      min-height: rem(220);
    }
-
+   &__button {
+      width: 100%;
+      margin-top: rem(30);
+   }
    // .popup__close
    &__close {
       position: absolute;
@@ -129,6 +142,7 @@ body::after {
                -webkit-text-fill-color: transparent;
                background-clip: text;
                text-fill-color: transparent;
+               font-weight: 600;
             }
             &:not(:last-child) {
                margin-bottom: rem(10);
