@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"Особистий кабінет" })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <div class="cabinet">
+          <div class="cabinet__container">
+            <div class="cabinet__head head-cabinet">
+              <div class="head-cabinet__left">
+                <div class="head-cabinet__level">
+                  <!-- 40 це потрібно з беку передати поточний процент -->
+                  <svg
+                    style="stroke-dashoffset: calc(100 - (40))"
+                    class="head-cabinet__circle-level"
+                    width="101"
+                    height="101"
+                    viewBox="0 0 101 101"
+                  >
+                    <circle
+                      class="percent ninety"
+                      cx="51"
+                      cy="51"
+                      r="48"
+                      fill="none"
+                      stroke="#903908"
+                      stroke-width="5"
+                      pathLength="100"
+                    />
+                  </svg>
+                  <div class="head-cabinet__level-content">
+                    19
+                    <span>Рівень</span>
+                  </div>
+                </div>
+                <div class="head-cabinet__avatar">
+                  <img src="@img/cabinet/avatar.png" alt="" />
+                </div>
+                <div class="head-cabinet__content">
+                  <div class="head-cabinet__name">Дмитро Васильович</div>
+                  <div class="head-cabinet__items">
+                    <p>Ваш ID: <span>188</span></p>
+                    <p>Покарання адміністрації: <span>Попередження</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="head-cabinet__right">
+                <span class="head-cabinet__current-server">
+                  Центральна Україна №1
+                </span>
+              </div>
+            </div>
+            <div class="cabinet__row">
+              <div data-spollers="991,max" class="cabinet-spollers">
+                <div class="cabinet-spollers__item">
+                  <button
+                    type="button"
+                    data-spoller
+                    class="cabinet-spollers__title"
+                  >
+                    <img src="@img/cabinet/list.svg" alt="" />
+                    Меню
+                  </button>
+                  <div class="cabinet-spollers__body">
+                    <div class="cabinet-spollers__links">
+                      <a href="" class="cabinet-spollers__link">
+                        <span class="cabinet-spollers__icon">
+                          <img src="@img/cabinet/01.svg" alt="" />
+                        </span>
+                        Головна
+                      </a>
+                      <a href="" class="cabinet-spollers__link">
+                        <span class="cabinet-spollers__icon">
+                          <img src="@img/cabinet/02.svg" alt="" />
+                        </span>
+                        Рейтинг
+                      </a>
+                      <a href="" class="cabinet-spollers__link">
+                        <span class="cabinet-spollers__icon">
+                          <img src="@img/cabinet/03.svg" alt="" />
+                        </span>
+                        Майно
+                      </a>
+                      <a href="" class="cabinet-spollers__link">
+                        <span class="cabinet-spollers__icon">
+                          <img src="@img/cabinet/04.svg" alt="" />
+                        </span>
+                        Інвентар
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="cabinet__main">
+                <div class="cabinet__info">
+                  <div class="cabinet__info-row">
+                    <div class="cabinet__info-item">
+                      <span>Рівень</span>
+                      <p>19</p>
+                    </div>
+                    <div class="cabinet__info-item">
+                      <span>Гроші</span>
+                      <p>₴200 000</p>
+                    </div>
+                    <div class="cabinet__info-item">
+                      <span>Донат</span>
+                      <p>₴1 200</p>
+                    </div>
+                    <div class="cabinet__info-item">
+                      <span>Номер дома</span>
+                      <p>№ 2312</p>
+                    </div>
+                    <div class="cabinet__info-item">
+                      <span>Фракція</span>
+                      <p>ПриватБанк</p>
+                    </div>
+                    <div class="cabinet__info-item">
+                      <span>Ранг в фракції</span>
+                      <p>Банкір</p>
+                    </div>
+                    <div class="cabinet__info-item">
+                      <span>Бізнес</span>
+                      <p>АЗС</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>

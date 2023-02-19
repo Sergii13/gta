@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"Відновлення паролю" })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <div class="auth">
+          <div class="auth__container">
+            <h2 class="auth__title">Відновлення паролю</h2>
+            <form action="#" class="auth__form form-auth">
+              <div class="options form-auth__options">
+                <div class="options__item">
+                  <input
+                    hidden
+                    id="o_1"
+                    class="options__input"
+                    type="radio"
+                    value="1"
+                    name="option"
+                  />
+                  <label for="o_1" class="options__label"
+                    ><span class="options__text">
+                      <span class="options__icon">
+                        <img src="@img/cabinet/star.svg" alt="" />
+                      </span>
+                      Центральна Україна №1</span
+                    ></label
+                  >
+                </div>
+                <div class="options__item">
+                  <input
+                    hidden
+                    id="o_2"
+                    class="options__input"
+                    type="radio"
+                    value="2"
+                    name="option"
+                  />
+                  <label for="o_2" class="options__label"
+                    ><span class="options__text"
+                      ><span class="options__icon">
+                        <img src="@img/cabinet/star.svg" alt="" />
+                      </span>
+                      Західна Україна №2</span
+                    ></label
+                  >
+                </div>
+              </div>
+
+              <div class="form-auth__items">
+                <div class="form__item">
+                  <input
+                    id="email"
+                    autocomplete="off"
+                    type="text"
+                    name="form[]"
+                    data-error="Ошибка"
+                    placeholder=""
+                    class="input"
+                  />
+                  <label for="email" class="form__label"> Ваш email </label>
+                </div>
+                <div class="form-auth__letter-ok">Лист відправлено!</div>
+              </div>
+              <div class="form__bottom">
+                <button class="button-icon vacancy__button">
+                  <div class="button-icon__row">
+                    <span class="button-icon__icon">
+                      <img src="@img/svg/play.svg" alt="" />
+                    </span>
+                    <span class="button-icon__text"> Відправити </span>
+                  </div>
+                </button>
+                <div class="form__bottom-right">
+                  <a href="" class="form__link">Не прийшов лист? </a> <br />
+                  <a href="" class="form__link"> Відправити повторно </a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
